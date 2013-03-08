@@ -20,4 +20,5 @@ v0.1:
  - CPU overclock O/C 1.2Ghz
  - performance: Turn CPUs online while active
  - VFP compil with neon
-
+ - mm: Tweak vm dirty ratios
+ - fs: Reduce vfs_cache_pressure to 20
