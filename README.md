@@ -24,4 +24,9 @@ v0.1:
  - fs: Reduce vfs_cache_pressure to 20
  - Asynchronous I/O latency to a solid-state disk greatly increased.
 
-
+V0.2:
+====
+ - Fsync control by Ezekeel
+ - sched: enable ARCH_POWER
+ - sched: Disable GENTLE_FAIR_SLEEPERS
+ - Tune CFS Parameters

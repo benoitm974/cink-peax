@@ -46,8 +46,6 @@ unsigned long arch_scale_smt_power(struct sched_domain *sd, int cpu)
 	/*
 	 * aperf/mperf already includes the smt gain
 	 */
-	if (boot_cpu_has(X86_FEATURE_APERFMPERF))
-		return SCHED_LOAD_SCALE;
 
 	return default_scale_smt_power(sd, cpu);
 }
