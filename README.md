@@ -22,3 +22,6 @@ v0.1:
  - VFP compil with neon
  - mm: Tweak vm dirty ratios
  - fs: Reduce vfs_cache_pressure to 20
+ - Asynchronous I/O latency to a solid-state disk greatly increased.
+
+
