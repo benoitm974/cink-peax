@@ -19,5 +19,5 @@ v0.1:
 =====
  - CPU overclock O/C 1.2Ghz
  - performance: Turn CPUs online while active
-
+ - VFP compil with neon
 
