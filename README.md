@@ -9,3 +9,15 @@ kernel
 	cd <kernel path>
 	../abuild.sh clean
 	../abuild.sh release
+
+general notes:
+==============
+ most tweaks taken from excellent works from: https://github.com/varunchitre15/thunderzap_canvas_2/
+ kernel source from wikogeek 4.0.4 for wiko cink peax
+
+v0.1:
+=====
+ - CPU overclock O/C 1.2Ghz
+ - performance: Turn CPUs online while active
+
+
