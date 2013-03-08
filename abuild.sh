@@ -2,7 +2,7 @@
 
 buildoutput=buildoutput
 prebuilt=mediatek
-makecore=-j27a
+makecore=-j27
 mkbootpath=../mkbootimg
 
 export TARGET_PRODUCT=tinnoes77_s9091
