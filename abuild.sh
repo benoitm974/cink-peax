@@ -2,7 +2,8 @@
 
 buildoutput=buildoutput
 prebuilt=mediatek
-makecore=-j27
+makecore=-j27a
+mkbootpath=../mkbootimg
 
 export TARGET_PRODUCT=tinnoes77_s9091
 export MTK_ROOT_CUSTOM=../mediatek/custom
@@ -29,6 +30,16 @@ while test -n "$1"; do
     ;;
     config)
 	cp mediatek-configs $buildoutput/.config
+    ;;
+    unpack)
+	cd $mkbootpath
+	./unpack-MT65xx.pl boot.img
+    ;;
+    pack)
+	cd $mkbootpath
+	dd if=boot.img-kernel.img of=boot_head_512.img count=1
+	dd if=../kernel/$buildoutput/arch/arm/boot/zImage of=boot_head_512.img seek=1	
+	./repack-MT65xx.pl -boot boot_head_512.img boot.img-ramdisk monboot.img
     esac
     shift
 done

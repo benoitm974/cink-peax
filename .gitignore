@@ -1,1 +1,4 @@
 kernel/buildoutput
+mkbootimg/boot.img-kernel.img
+mkbootimg/boot.img-ramdisk/
+mkbootimg/boot_head_512.img

@@ -86,8 +86,11 @@ sub repack_boot {
 	# create the output file
 	if ( $^O eq "cygwin" ) {
 		system ("$Bin/mkbootimg.exe --kernel $kernel --ramdisk new-ramdisk-repack.cpio.gz -o $outfile");
+	} 
+	if ( `uname -p` =~ m/x86_64/  ) {
+		system ("$Bin/mkbootimg_x64 --kernel $kernel --ramdisk new-ramdisk-repack.cpio.gz -o $outfile");
 	} else {
-		system ("$Bin/mkbootimg --kernel $kernel --ramdisk new-ramdisk-repack.cpio.gz -o $outfile");
+		system ("$Bin/mkbootimg_x32 --kernel $kernel --ramdisk new-ramdisk-repack.cpio.gz -o $outfile");
 	}
 
 	# cleanup
