@@ -37,7 +37,7 @@ typedef signed int      MINT32;
 #define KD_DUMMY_FLASHLIGHT_ID      1
 #define KD_PEAK_FLASHLIGHT_ID       2
 #define KD_TORCH_FLASHLIGHT_ID      3
-#define KD_CONSTANT_FLASHLIGHT_ID   4
+#define KD_CONSTANT_FLASHLIGHT_ID   1
 
 typedef struct
 {
