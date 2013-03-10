@@ -4,6 +4,7 @@ buildoutput=buildoutput
 prebuilt=mediatek
 makecore=-j27
 mkbootpath=../mkbootimg
+mediatek_config=mediatek-configs-no_dbg_lzma
 
 export TARGET_PRODUCT=tinnoes77_s9091
 export MTK_ROOT_CUSTOM=../mediatek/custom
@@ -29,7 +30,7 @@ while test -n "$1"; do
 	find . -name *.module | tar -cf - -T - | tar -xf - -C $kerneldir/$buildoutput/$prebuilt
     ;;
     config)
-	cp mediatek-configs $buildoutput/.config
+	cp mediatek_config $buildoutput/.config
     ;;
     menuconfig)
 	make menuconfig O=$buildoutput

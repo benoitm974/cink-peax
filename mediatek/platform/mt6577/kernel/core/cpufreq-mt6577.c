@@ -142,6 +142,7 @@ static struct early_suspend mtk_cpufreq_early_suspend_handler =
 #define DVFS_F4_MT6577_E1       DVFS_F4
 #define DVFS_F5_MT6577_E1       DVFS_F5
 #define DVFS_F6_MT6577_E1       DVFS_F6
+#define DVFS_F7_MT6577_E1       DVFS_F7
 
 #define DVFS_F1_MT6577_E1_TM    DVFS_F1_TM
 #define DVFS_F2_MT6577_E1_TM    DVFS_F2_TM
@@ -213,6 +214,7 @@ static struct mtk_cpu_freq_info mt6575_freqs_e2[] = {
 * MT6577 E1 DVFS Table
 ****************************/
 static struct mtk_cpu_freq_info mt6577_freqs_e1[] = {
+    OP(DVFS_F7_MT6577_E1),
     OP(DVFS_F6_MT6577_E1),
     OP(DVFS_F5_MT6577_E1),
     OP(DVFS_F4_MT6577_E1),
@@ -631,7 +633,7 @@ static int mtk_cpufreq_init(struct cpufreq_policy *policy)
         }
         else
         {
-            policy->cpuinfo.min_freq = DVFS_F6_MT6577_E1;
+            policy->cpuinfo.min_freq = DVFS_F7_MT6577_E1;
             policy->cpuinfo.max_freq = DVFS_F1_MT6577_E1;
         }
     }
@@ -1107,7 +1109,7 @@ static int cpufreq_pdrv_probe(struct platform_device *pdev)
         {
             g_cur_freq = DVFS_F1_MT6577_E1;
             g_limited_freq = DVFS_F1_MT6577_E1;
-            g_limited_min_freq = DVFS_F6_MT6577_E1;
+            g_limited_min_freq = DVFS_F7_MT6577_E1;
         }
     }
     else if (get_chip_ver() >= CHIP_6575_E2)
