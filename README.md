@@ -17,11 +17,13 @@ general notes:
 
 v0.3:
 =====
- WARNING: revert to stock has it seems I was too fast including patch
+ WARNING: revert to stock sources as it seems I was too fast including patch
  - fix linaro 4.7 forcing inline function
  - fix flashlight, due to missing source from wiko
  - VFP compil with neon
  - Asynchronous I/O latency to a solid-state disk
+ - governors: smartass2, zzmoove, pegasusq, lulzactiveq, hotplug
+ - fix performance governor (fix AndreiLux )
 
 V0.2:
 ====
