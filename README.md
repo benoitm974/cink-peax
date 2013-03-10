@@ -15,6 +15,20 @@ general notes:
  most tweaks taken from excellent works from: https://github.com/varunchitre15/thunderzap_canvas_2/
  kernel source from wikogeek 4.0.4 for wiko cink peax
 
+v0.3:
+=====
+ WARNING: revert to stock has it seems I was too fast including patch
+ - fix linaro 4.7 forcing inline function
+ - fix flashlight, due to missing source from wiko
+ - 
+
+V0.2:
+====
+ - Fsync control by Ezekeel
+ - sched: enable ARCH_POWER
+ - sched: Disable GENTLE_FAIR_SLEEPERS
+ - Tune CFS Parameters
+
 v0.1:
 =====
  - CPU overclock O/C 1.2Ghz
@@ -24,9 +38,3 @@ v0.1:
  - fs: Reduce vfs_cache_pressure to 20
  - Asynchronous I/O latency to a solid-state disk greatly increased.
 
-V0.2:
-====
- - Fsync control by Ezekeel
- - sched: enable ARCH_POWER
- - sched: Disable GENTLE_FAIR_SLEEPERS
- - Tune CFS Parameters
