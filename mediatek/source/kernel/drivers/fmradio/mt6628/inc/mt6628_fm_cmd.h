@@ -45,6 +45,6 @@ fm_s32 mt6628_full_cqi_req(fm_u8 *buf, fm_s32 buf_size, fm_u16 *freq, fm_s32 cnt
  *
  * Return 0, if 760~1080; return 1, if 7600 ~ 10800, else err code < 0
  */
-inline fm_s32 fm_get_channel_space(int freq);
+fm_s32 fm_get_channel_space(int freq);
 
 #endif

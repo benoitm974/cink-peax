@@ -31,6 +31,16 @@ while test -n "$1"; do
     config)
 	cp mediatek-configs $buildoutput/.config
     ;;
+    menuconfig)
+	make menuconfig O=$buildoutput
+    ;;
+    mrproper)
+	make mrproper O=$buildoutput
+    ;;
+    cleanup)
+	make clean
+	make mrproper
+    ;;
     unpack)
 	cd $mkbootpath
 	./unpack-MT65xx.pl boot.img
