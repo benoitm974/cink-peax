@@ -4,7 +4,7 @@ buildoutput=buildoutput
 prebuilt=mediatek
 makecore=-j27
 mkbootpath=../mkbootimg
-mediatek_config=mediatek-configs-no_dbg_lzma
+mediatek_config=mediatek-configs
 
 export TARGET_PRODUCT=tinnoes77_s9091
 export MTK_ROOT_CUSTOM=../mediatek/custom
