@@ -15,6 +15,16 @@ general notes:
  most tweaks taken from excellent works from: https://github.com/varunchitre15/thunderzap_canvas_2/
  kernel source from wikogeek 4.0.4 for wiko cink peax
 
+v0.4:
+=====
+governor: interactive(2xcore OK), conservative
+ - SYNC control (attention patch controversé, desactivable:
+    FSync Control which can be used to disable the fsync system calls for single files and filesystems (echo 0 > /sys/class/misc/fsynccontrol/fsync_enabled)) -> peut-être une optino à mettre dans une install de ROM ?
+ - Tune CFS Parameters
+ - sched: Disable GENTLE_FAIR_SLEEPERS
+ - LZO compression
+ - ioshed: SIO, VR and ZEN
+
 v0.3:
 =====
  WARNING: revert to stock sources as it seems I was too fast including patch
