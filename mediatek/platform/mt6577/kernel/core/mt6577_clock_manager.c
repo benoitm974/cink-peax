@@ -2821,7 +2821,7 @@ int pll_fsel(enum mt65xx_pll_id id, unsigned int pll_value)
     if (id == MT65XX_TVDDS) {
         DRV_WriteReg16(mt65xx_pll_regs[id], hi_val); 
         DRV_WriteReg16(mt65xx_pll_regs[id] + 4, lo_val); 
-    } else if (id == MT65XX_ARMPLL) {
+    } else if (id == MT65XX_ARMPLL || MT65XX_MAINPLL || MT65XX_MDPLL || MT65XX_MEMPLL) {
     	DRV_WriteReg16(mt65xx_pll_regs[id],
             (DRV_Reg16(mt65xx_pll_regs[id]) & 0x3F) | (hi_val )); //why 7FC0 ?
     } else {

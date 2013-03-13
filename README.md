@@ -15,6 +15,20 @@ general notes:
  most tweaks taken from excellent works from: https://github.com/varunchitre15/thunderzap_canvas_2/
  kernel source from wikogeek 4.0.4 for wiko cink peax
 
+v0.5.1:
+======
+ - clkmanager etendu a MAINPLL et MEMPLL
+ - boost de la MAINPLL au passage dans init.rc
+
+v0.5:
+=====
+- clkmanager.c changé pour piloter la PLL
+- cpufreq changé pour rajouté 1 fréquence: attention ici j'ai rapidement pris les fréquence de la version TM du proc mais ca ne veut rien dire je ne sais pas a combien tourne le proc! Tant que je n'ai pas décrypter les champs du registre, c'est de l'expérimental...
+- init.c du boot.img modifier pour enregistrer la valeur d'overclock au boot. normalement tant que vous n'activer pas de setcpu ou autre la PLL et poussée mais le diviseur de fréquence est à F2 donc on boot en 1Ghz. et il faut un setCPU pour passer en O/C.
+utiliser echo 0 0x000050a0 > /proc/clkmgr/pll_fsel en adb bash ou 50 et le coef le code d'origine est 43
+
+download -> https://dl.dropbox.c...ot_peax_0_5.img
+
 v0.4:
 =====
 governor: interactive(2xcore OK), conservative
