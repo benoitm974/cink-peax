@@ -10,8 +10,8 @@ export TARGET_PRODUCT=tinnoes77_s9091
 export MTK_ROOT_CUSTOM=../mediatek/custom
 export KBUILD_OUTPUT_SUPPORT=yes
 export ARCH=arm
-#export CROSS_COMPILE=/usr/bin/arm-linux-gnueabi-
-export CROSS_COMPILE=/home/benoitm/working/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7/bin/arm-linux-androideabi-
+export CROSS_COMPILE=/usr/bin/arm-linux-gnueabi-
+#export CROSS_COMPILE=/home/benoitm/working/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7/bin/arm-linux-androideabi-
 
 
 kerneldir=`pwd`

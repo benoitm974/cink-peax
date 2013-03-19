@@ -136,13 +136,13 @@ static struct early_suspend mtk_cpufreq_early_suspend_handler =
 #define DVFS_F3_MT6575_E2       DVFS_F6
 #define DVFS_F4_MT6575_E2       DVFS_F7
 
-#define DVFS_F1_MT6577_E1       DVFS_F1_TM
-#define DVFS_F2_MT6577_E1       DVFS_F2_TM
-#define DVFS_F3_MT6577_E1       DVFS_F3_TM
-#define DVFS_F4_MT6577_E1       DVFS_F4_TM
-#define DVFS_F5_MT6577_E1       DVFS_F5_TM
-#define DVFS_F6_MT6577_E1       DVFS_F6_TM
-#define DVFS_F7_MT6577_E1       DVFS_F7_TM
+#define DVFS_F1_MT6577_E1       DVFS_F1
+#define DVFS_F2_MT6577_E1       DVFS_F2
+#define DVFS_F3_MT6577_E1       DVFS_F3
+#define DVFS_F4_MT6577_E1       DVFS_F4
+#define DVFS_F5_MT6577_E1       DVFS_F5
+#define DVFS_F6_MT6577_E1       DVFS_F6
+#define DVFS_F7_MT6577_E1       DVFS_F7
 
 #define DVFS_F1_MT6577_E1_TM    DVFS_F1_TM
 #define DVFS_F2_MT6577_E1_TM    DVFS_F2_TM
@@ -1107,7 +1107,7 @@ static int cpufreq_pdrv_probe(struct platform_device *pdev)
         }
         else
         {
-            g_cur_freq = DVFS_F2_MT6577_E1;
+            g_cur_freq = DVFS_F1_MT6577_E1;
             g_limited_freq = DVFS_F1_MT6577_E1;
             g_limited_min_freq = DVFS_F7_MT6577_E1;
         }
